@@ -1,0 +1,18 @@
+replicaCount: 1
+image:
+  repository: louislam/uptime-kuma
+  tag: 1.26.2
+service:
+  type: ClusterIP
+  port: 3001
+ingress:
+  enabled: true
+  hosts:
+    - host: uptime-kuma.dev.pipelinebr
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - secretName: uptime-kuma-tls
+      hosts:
+        - uptime-kuma.dev.pipelinebr
