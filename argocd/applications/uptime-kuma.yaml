@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/Du-devBR/pipelinebr-observability.git'
     targetRevision: main
-    path: environment/dev/infra/uptime/base
+    path: enviroment/dev/infra/uptime/base
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: monitoring
